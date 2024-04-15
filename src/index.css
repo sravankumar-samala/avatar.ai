@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dark {
+  --primary-bg: 19, 19, 22;
+  --secondary-bg: 24, 24, 27;
+  --text-primary: 245, 245, 245;
+  --primary-border: 39, 39, 42;
+  --primary-hover: 39, 39, 42;
+  --accent-hover: 57, 57, 61;
+  --secondary-hover: 113, 113, 112;
+  --txt-secondary: 153, 153, 153;
+  --nav-buttons: 165, 159, 159;
+}
+.light {
+  --primary-bg: 245, 245, 245;
+  --secondary-bg: 244, 244, 245;
+  --text-primary: 0, 0, 0;
+  --primary-border: 229, 229, 230;
+  --primary-hover: 228, 228, 231;
+  --accent-hover: 211, 211, 219;
+  --secondary-hover: 49, 51, 55;
+  --txt-secondary: 118, 121, 127;
+  --nav-buttons: 113, 113, 112;
+}
+
+* {
+  @apply transition-colors duration-200;
+}
+.active {
+  @apply bg-primary-hover;
+}
+.swiper {
+  border-radius: 0.5em;
+}
+.swiper-slide {
+  width: auto;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
+}
+
+.btn {
+  @apply grid place-items-center text-2xl text-navBtns h-full w-10 opacity-0 group-hover:opacity-100  transition-opacity duration-500;
+}
+.prevBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9;
+  @apply group-hover:bg-gradient-to-r from-secondaryBg to-transparent;
+}
+.nextBtn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9;
+  @apply group-hover:bg-gradient-to-l from-secondaryBg to-transparent;
+}
