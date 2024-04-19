@@ -33,7 +33,7 @@ const aiSuggestionsData = [
     id: uuid(),
     imageSrc: "image-generator.png",
     name: "Image Generator",
-    creator: "@LittleBanana",
+    creator: "@LittleBananas",
     description: "An AI for you to create images",
     usersCount: 4.3,
   },
